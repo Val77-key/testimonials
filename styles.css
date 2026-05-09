@@ -1,0 +1,245 @@
+@font-face {
+    font-display: swap; 
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 500;
+    src: url('fonts/barlow-semi-condensed-v16-latin-500.woff2') format('woff2'); 
+  }
+  
+  @font-face {
+    font-display: swap; 
+    font-family: 'Barlow Semi Condensed';
+    font-style: normal;
+    font-weight: 600;
+    src: url('fonts/barlow-semi-condensed-v16-latin-600.woff2') format('woff2'); 
+  }
+  
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+    height: auto;
+}
+
+:root {
+    /*colors*/
+    --Black:#121212;
+    --Dark-Blue:#19202D;
+    --White:#FFFFFF;
+    --Grey-100:#E7EAEE;
+    --Grey-200:#CFCFCF;
+    --Grey-400:#676D7E;
+    --Grey-500:#48556A;
+    --Purple-50:#EDE4FF;
+    --Purple-300:#A775F1;
+    --Purple-500:#733FC8;
+    
+    /*spacing*/
+    
+    --spacing-500:2.5rem; /*40px*/
+    --spacing-400:2rem; /*32px*/
+    --spacing-300:1.5rem; /*24px*/
+    --spacing-200:1rem; /*16px*/
+    --spacing-100:0.5rem; /*8px*/
+    --spacing-50:0.25rem; /*4px*/
+}
+
+html {
+    font-size: 100%;
+}
+
+
+body {
+    background-color: #F6F5F6;
+    font-family: "Barlow Semi Condensed", "Arial Narrow", Arial, sans-serif;
+}
+
+.main_heading {
+    display: none;
+}
+
+.main {
+    display: grid;
+    gap: var(--spacing-400);
+    grid-auto-columns: 1fr;
+    grid-template-areas: 'daniel'
+    'jonathan'
+    'jeanette'
+    'patrick'
+    'kira';
+    margin: 4.563rem auto 2.438rem;
+}
+
+.testimonial {
+    max-width: 19.063rem;
+    width:90%;
+    margin:  0 auto;
+    padding: var(--spacing-400);
+    border-radius: 8px;
+
+}
+
+.testimonial__heading {
+    display: flex;
+    align-items: center;
+}
+
+
+.image {
+    margin-inline-end: 1.063rem;
+}
+
+img {
+    border-radius: 50%;
+}
+
+.border {
+    border: 2px solid var(--Purple-300);
+} 
+
+.text-preset-1 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 120%;  
+}
+
+.text-preset-2 {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.text-preset-3 {
+    font-size: 0.813rem;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+.text-preset-4 {
+    font-size: 0.688rem;
+    font-weight: 500;
+    line-height: 110%;
+}
+
+.Daniel {
+    background-color: var(--Purple-500);
+    color:var(--White);
+    grid-area: daniel;
+}
+
+.Daniel__title {
+    width:min-content;
+}
+
+.Daniel__subtitle,.Daniel__quote {
+    color: var(--Purple-50);
+}
+
+.Daniel__bold-quote,.Jonathan__bold-quote  { 
+    margin: var(--spacing-200) 0;
+}
+
+.Jonathan {
+    background-color:var(--Grey-500);
+    color: var(--White);
+    grid-area: jonathan;
+}
+
+.Jonathan__subtitle,.Johnathan__quote,.Patrick__quote {
+    color: var(--Grey-100);
+}
+
+
+.Jeanette {
+    background-color: var(--White);
+    grid-area: jeanette;
+
+}
+
+.Jeanette__title,.Kira__title {
+    color:var(--Grey-500);
+
+}
+.Jeanette__subtitle,.Jeanette__quote,.Kira__subtitle,.Kira__quote  {
+    color:var(--Grey-400);
+}
+
+.Jeanette__bold-quote {
+    color:var(--Grey-500);
+    margin: var(--spacing-200) 0;
+}
+
+.Patrick {
+    background-color: var(--Dark-Blue);
+    grid-area:patrick;
+}
+
+.Patrick__title,.Patrick__subtitle {
+    color: var(--White);
+}
+
+.Patrick__bold-quote {
+    color:var(--Grey-200);
+    margin: var(--spacing-200) 0;
+}
+
+.Kira {
+    background-color: var(--White);
+    grid-area: kira;
+}
+
+.Kira__bold-quote {
+    color:var(--Grey-500);
+    margin: var(--spacing-200) 0;
+}
+
+
+@media screen and (min-width:48rem) {
+
+    .Daniel__title {
+        width:initial;
+        font-size: 0.813rem;
+        font-weight: 500;
+        line-height: 110%;
+    } 
+
+    .testimonial {
+        max-width: 40.438rem;
+        width:initial;
+    }
+   
+    .main {
+        max-width: 40.438rem;
+        margin: 5.188rem auto 7.063rem;
+        grid-template-areas: 'daniel daniel'
+        'jonathan jeanette'
+        'patrick patrick'
+        'kira kira';
+    }
+}
+
+@media screen and (min-width:70rem) {
+    .main {
+        margin: 14.313rem auto 13.625rem;
+        width:95%;
+        max-width: 69.625rem;
+        grid-template-areas: 'daniel daniel jonathan kira'
+        'jeanette patrick patrick kira';
+    }
+
+}
+
+
+.attribution { 
+    font-size: 0.6875rem; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
